@@ -2,7 +2,14 @@ Experimental Jazzy build . Untested!
 
 # caatingarobotics jazzy/harmonic test branch
 
-What I use to build this. (after opening a terminal in the workspace)
+Clone.
+
+``` bash
+git clone https://github.com/ilovemicroplastics/caatingarobotics_harmonic_port_test.git
+cd caatingarobotics_harmonic_port_test
+```
+
+What I use to build this.
 
 ```bash
 source /opt/ros/jazzy/setup.bash
