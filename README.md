@@ -1,6 +1,6 @@
 Experimental Jazzy build . Untested!
 
-# caatingarobotics jazzy/harmonic test branch
+# caatingarobotics jazzy/harmonic test repo
 
 Clone.
 
