@@ -35,10 +35,11 @@ source install/setup.bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/cmd_vel
 ```
 
-# changes from original
+# future work
 - sim.launch.py changed completely to fit gazebo harmonic
 - agro_robot.urdf.xacro , is robo_caatinga.xacro modified to run in harmonic
 - empty.sdf , is an empty sdf file, which also contains sensor plugins
+- implement lcas
 
 # known problems
 - the other launch files need to be adjusted to properly work with the new sim.launch.py
