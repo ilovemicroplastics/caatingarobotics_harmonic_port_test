@@ -26,6 +26,14 @@ source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch agro_robot_sim sim.launch.py
 ```
+Test drive. (in a new terminal)
+
+```bash
+cd caatingarobotics_harmonic_port_test
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/cmd_vel
+```
 
 # changes from original
 - sim.launch.py changed completely to fit gazebo harmonic
