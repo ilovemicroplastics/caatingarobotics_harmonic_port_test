@@ -41,6 +41,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:
 - empty.sdf , is an empty sdf file, which also contains sensor plugins
 
 # future work
+- figure out which repo we will stick to, it confuses me, I assume the original caatinga repo
 - the other launch files need to be adjusted to properly work with the new sim.launch.py
 - the world filepath should not be hardcoded
 - the world should have crop rows, and not be empty
