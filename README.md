@@ -39,6 +39,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:
 - sdf file contains sensor plugins
 
 # future work
+- change the URDF to look like the real robot
 - implement lcas?
 - are all the sensors properly set up with the changes? I think it's fine but I haven't looked at those modules to conclusively say it works 100%
 
