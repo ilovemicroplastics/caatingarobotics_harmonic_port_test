@@ -1,5 +1,3 @@
-<img width="1969" height="1041" alt="image" src="https://github.com/user-attachments/assets/ed403d8b-9a5a-4617-a7c8-a74bd7266c5b" />Experimental Jazzy build . Untested!
-
 # caatingarobotics jazzy/harmonic test repo
 
 Clone.
