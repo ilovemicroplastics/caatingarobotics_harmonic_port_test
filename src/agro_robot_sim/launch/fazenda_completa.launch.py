@@ -23,7 +23,7 @@ def generate_launch_description():
     )
     world_arg = DeclareLaunchArgument(
         'world',
-        default_value='empty.sdf',                                 # Potential problem (in sim.launch.py)
+        default_value='empty.sdf',
         description='Nome do arquivo do mundo Gazebo'
     )
 
@@ -46,7 +46,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(pkg_agro, 'launch', 'sim.launch.py')
         ),
-        launch_arguments={'world': world_path}.items()                   # Potential problem (in sim.launch.py)
+        launch_arguments={'world': world_path}.items()
     )
 
     # --- NOVIDADE 2: Nós de Localização GPS (Robot Localization) ---
