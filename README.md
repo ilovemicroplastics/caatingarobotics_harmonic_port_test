@@ -35,6 +35,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:
 
 # differences to original
 - sim.launch.py changed completely to fit gazebo harmonic
+- fazenda_completa.launch.py uses new world sdf world file
 - agro_robot.urdf.xacro , is robo_caatinga.xacro modified to run in harmonic
 - sdf file contains sensor plugins
 
