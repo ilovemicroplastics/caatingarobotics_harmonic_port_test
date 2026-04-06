@@ -1,4 +1,4 @@
-Experimental Jazzy build . Untested!
+<img width="1969" height="1041" alt="image" src="https://github.com/user-attachments/assets/ed403d8b-9a5a-4617-a7c8-a74bd7266c5b" />Experimental Jazzy build . Untested!
 
 # caatingarobotics jazzy/harmonic test repo
 
@@ -24,7 +24,7 @@ To run when already built.
 ```bash
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch agro_robot_sim sim.launch.py
+ros2 launch agro_robot_sim fazenda_completa.launch.py
 ```
 Test drive. (in a new terminal)
 
@@ -41,9 +41,6 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:
 - empty.sdf , is an empty sdf file, which also contains sensor plugins
 
 # future work
-- figure out which repo we will stick to, it confuses me, I assume the original caatinga repo
-- the other launch files need to be adjusted to properly work with the new sim.launch.py
-- the world filepath should not be hardcoded
 - the world should have crop rows, and not be empty
 - implement lcas
 
