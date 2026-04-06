@@ -6,14 +6,14 @@ from launch.substitutions import LaunchConfiguration, Command
 from ament_index_python.packages import get_package_share_directory
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
+from launch.substitutions import PathJoinSubstitution, TextSubstitution
 
 def generate_launch_description():
 
     pkg_name     = "agro_robot_sim"
     pkg_share    = get_package_share_directory(pkg_name)
     xacro_file   = os.path.join(pkg_share, "urdf", "agro_robot.urdf.xacro")
-    world_file   = os.path.join(pkg_share, "worlds", "empty.sdf") # setting the path of the world here is not supposed to be permanent.
-    gz_pkg_share = get_package_share_directory("ros_gz_sim")      # in the future this will be set from other files.
+    gz_pkg_share = get_package_share_directory("ros_gz_sim")
 
     # 0. launch arguments
     x_arg = DeclareLaunchArgument("x", default_value="0.0")
@@ -21,12 +21,15 @@ def generate_launch_description():
     z_arg = DeclareLaunchArgument("z", default_value="0.3")
 
     # 1. open gazebo harmonic 
+    world = LaunchConfiguration('world')
+    world_file = PathJoinSubstitution([pkg_share, 'worlds', world])
+
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(gz_pkg_share, "launch", "gz_sim.launch.py")
         ),
         launch_arguments={
-            "gz_args": f"-r {world_file}",
+            "gz_args": [TextSubstitution(text='-r '), world_file],
             "on_exit_shutdown": "True",
         }.items(),
     )
